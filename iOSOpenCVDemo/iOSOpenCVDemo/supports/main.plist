@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>datas</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>人脸+四边形检测</string>
+			<key>method</key>
+			<string>faceAndRectDetectAction:</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>马赛克</string>
+			<key>method</key>
+			<string>mosaicProcessAction:</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>画可拖动四边形</string>
+			<key>method</key>
+			<string>drawGestureRectAction:</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>滤波</string>
+			<key>method</key>
+			<string>filteAction:</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>霍夫变换</string>
+			<key>method</key>
+			<string>houghAction:</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>实时四边形追踪</string>
+			<key>method</key>
+			<string>realTimeRectDetection:</string>
+		</dict>
+	</array>
+</dict>
+</plist>

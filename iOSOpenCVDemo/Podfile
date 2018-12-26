@@ -1,0 +1,11 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'iOSOpenCVDemo' do
+
+  pod 'Masonry'
+  #pod 'MJRefresh'
+  pod 'OpenCV', '~> 3.4.2'
+
+end
+
