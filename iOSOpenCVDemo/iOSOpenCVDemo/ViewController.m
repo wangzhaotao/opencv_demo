@@ -44,31 +44,16 @@
 }
 
 #pragma mark actions
--(void)faceAndRectDetectAction:(NSIndexPath*)idxPath {
+-(void)clickCellAction:(NSIndexPath*)idxPath {
     
-    
+    NSDictionary *dic = self.dataArray[idxPath.row];
+    NSString *vcName = dic[@"vc"];
+    if (vcName) {
+        UIViewController *controller = [NSClassFromString(vcName) new];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
--(void)mosaicProcessAction:(NSIndexPath*)idxPath {
-    
-    
-}
--(void)drawGestureRectAction:(NSIndexPath*)idxPath {
-    
-    
-}
--(void)filteAction:(NSIndexPath*)idxPath {
-    
-    
-}
--(void)houghAction:(NSIndexPath*)idxPath {
-    
-    
-}
--(void)realTimeRectDetection:(NSIndexPath*)idxPath {
-    
-    WTRealTimeRectDetectionVC *vc = [WTRealTimeRectDetectionVC new];
-    [self.navigationController pushViewController:vc animated:YES];
-}
+
 
 #pragma mark UITableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -89,7 +74,7 @@
     NSString *method = dic[@"method"];
     SEL methodAction = NSSelectorFromString(method);
     if ([self respondsToSelector:methodAction]) {
-        [self performSelector:methodAction withObject:nil afterDelay:0];
+        [self performSelector:methodAction withObject:indexPath afterDelay:0];
     }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

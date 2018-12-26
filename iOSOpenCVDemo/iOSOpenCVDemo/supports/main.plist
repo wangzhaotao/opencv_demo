@@ -8,37 +8,49 @@
 			<key>title</key>
 			<string>人脸+四边形检测</string>
 			<key>method</key>
-			<string>faceAndRectDetectAction:</string>
+			<string>clickCellAction:</string>
+			<key>vc</key>
+			<string>WTFaceRectDetectionVC</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>马赛克</string>
 			<key>method</key>
-			<string>mosaicProcessAction:</string>
+			<string>clickCellAction:</string>
+			<key>vc</key>
+			<string>WTMosaicImageVC</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>画可拖动四边形</string>
 			<key>method</key>
-			<string>drawGestureRectAction:</string>
+			<string>clickCellAction:</string>
+			<key>vc</key>
+			<string>WTDrawRectController</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>滤波</string>
 			<key>method</key>
-			<string>filteAction:</string>
+			<string>clickCellAction:</string>
+			<key>vc</key>
+			<string>WTGaussFilterVC</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>霍夫变换</string>
 			<key>method</key>
-			<string>houghAction:</string>
+			<string>clickCellAction:</string>
+			<key>vc</key>
+			<string>WTHoughLinesVC</string>
 		</dict>
 		<dict>
 			<key>title</key>
 			<string>实时四边形追踪</string>
 			<key>method</key>
-			<string>realTimeRectDetection:</string>
+			<string>clickCellAction:</string>
+			<key>vc</key>
+			<string>WTRealTimeRectDetectionVC</string>
 		</dict>
 	</array>
 </dict>
