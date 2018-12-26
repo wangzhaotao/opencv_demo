@@ -6,6 +6,7 @@ target 'iOSOpenCVDemo' do
   pod 'Masonry'
   #pod 'MJRefresh'
   pod 'OpenCV', '~> 3.4.2'
+  ###pod 'opencv_contrib'###
 
 end
 

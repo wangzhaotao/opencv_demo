@@ -39,9 +39,6 @@
 		7B1E0EB721A9B94F00F8FBE2 /* face3_me.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B1E0E8521A9B94E00F8FBE2 /* face3_me.png */; };
 		7B1E0EB821A9B94F00F8FBE2 /* ImageProcessUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E0E8821A9B94E00F8FBE2 /* ImageProcessUtils.mm */; };
 		7B1E0EB921A9B94F00F8FBE2 /* GaussFilterTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E0E8B21A9B94F00F8FBE2 /* GaussFilterTool.mm */; };
-		7B1E0EBA21A9B94F00F8FBE2 /* haarcascade_eye.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7B1E0E8E21A9B94F00F8FBE2 /* haarcascade_eye.xml */; };
-		7B1E0EBB21A9B94F00F8FBE2 /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7B1E0E8F21A9B94F00F8FBE2 /* haarcascade_frontalface_alt.xml */; };
-		7B1E0EBC21A9B94F00F8FBE2 /* FaceUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E0E9021A9B94F00F8FBE2 /* FaceUtils.mm */; };
 		7B1E0EBD21A9B94F00F8FBE2 /* bigger_rect.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B1E0E9521A9B94F00F8FBE2 /* bigger_rect.png */; };
 		7B1E0EBE21A9B94F00F8FBE2 /* reset_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B1E0E9621A9B94F00F8FBE2 /* reset_icon.png */; };
 		7B1E0EBF21A9B94F00F8FBE2 /* rect1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B1E0E9721A9B94F00F8FBE2 /* rect1.png */; };
@@ -61,6 +58,10 @@
 		8EA5530D21C744230075E951 /* WTRealTimeRectDetetionTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5530C21C744230075E951 /* WTRealTimeRectDetetionTool.mm */; };
 		8EA5531121C750770075E951 /* WTRealTimeRectDetectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5530F21C750770075E951 /* WTRealTimeRectDetectionVC.m */; };
 		8EA5531221C750770075E951 /* WTRealTimeRectDetectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EA5531021C750770075E951 /* WTRealTimeRectDetectionVC.xib */; };
+		8EEAE89921D381DC0028FB6A /* haarcascade_eye.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8EEAE89621D381DB0028FB6A /* haarcascade_eye.xml */; };
+		8EEAE89A21D381DC0028FB6A /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8EEAE89721D381DB0028FB6A /* haarcascade_frontalface_alt.xml */; };
+		8EEAE89B21D381DC0028FB6A /* FaceUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8EEAE89821D381DB0028FB6A /* FaceUtils.mm */; };
+		8EEAE89E21D382090028FB6A /* FaceDistinguishTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8EEAE89D21D382090028FB6A /* FaceDistinguishTool.mm */; };
 		EADF123EAE758DF4071EFFE9 /* Pods_iOSOpenCVDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C6C691DC47AB1E6C084BC5 /* Pods_iOSOpenCVDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,10 +111,6 @@
 		7B1E0E8821A9B94E00F8FBE2 /* ImageProcessUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessUtils.mm; sourceTree = "<group>"; };
 		7B1E0E8A21A9B94F00F8FBE2 /* GaussFilterTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaussFilterTool.h; sourceTree = "<group>"; };
 		7B1E0E8B21A9B94F00F8FBE2 /* GaussFilterTool.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GaussFilterTool.mm; sourceTree = "<group>"; };
-		7B1E0E8D21A9B94F00F8FBE2 /* FaceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceUtils.h; sourceTree = "<group>"; };
-		7B1E0E8E21A9B94F00F8FBE2 /* haarcascade_eye.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye.xml; sourceTree = "<group>"; };
-		7B1E0E8F21A9B94F00F8FBE2 /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
-		7B1E0E9021A9B94F00F8FBE2 /* FaceUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceUtils.mm; sourceTree = "<group>"; };
 		7B1E0E9221A9B94F00F8FBE2 /* TJRectDectectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRectDectectView.h; sourceTree = "<group>"; };
 		7B1E0E9321A9B94F00F8FBE2 /* TJRectDectectPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRectDectectPreviewController.h; sourceTree = "<group>"; };
 		7B1E0E9521A9B94F00F8FBE2 /* bigger_rect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigger_rect.png; sourceTree = "<group>"; };
@@ -144,6 +141,12 @@
 		8EA5530E21C750770075E951 /* WTRealTimeRectDetectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTRealTimeRectDetectionVC.h; sourceTree = "<group>"; };
 		8EA5530F21C750770075E951 /* WTRealTimeRectDetectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTRealTimeRectDetectionVC.m; sourceTree = "<group>"; };
 		8EA5531021C750770075E951 /* WTRealTimeRectDetectionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WTRealTimeRectDetectionVC.xib; sourceTree = "<group>"; };
+		8EEAE89521D381DB0028FB6A /* FaceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceUtils.h; sourceTree = "<group>"; };
+		8EEAE89621D381DB0028FB6A /* haarcascade_eye.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye.xml; sourceTree = "<group>"; };
+		8EEAE89721D381DB0028FB6A /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		8EEAE89821D381DB0028FB6A /* FaceUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceUtils.mm; sourceTree = "<group>"; };
+		8EEAE89C21D382090028FB6A /* FaceDistinguishTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDistinguishTool.h; sourceTree = "<group>"; };
+		8EEAE89D21D382090028FB6A /* FaceDistinguishTool.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDistinguishTool.mm; sourceTree = "<group>"; };
 		9D430188BF7935EF92A170E4 /* Pods-iOSOpenCVDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSOpenCVDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSOpenCVDemo/Pods-iOSOpenCVDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B4C6C691DC47AB1E6C084BC5 /* Pods_iOSOpenCVDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSOpenCVDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -242,6 +245,8 @@
 		7B1E0E7521A9B94400F8FBE2 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				8EEAE89421D381DB0028FB6A /* FaceDetection */,
+				8EEAE89321D381870028FB6A /* FaceDistinguish */,
 				8EA5530A21C743F50075E951 /* RealTimeRectDetection */,
 				8E324B0721AD775D009B7C9E /* RectCorrection */,
 				7B1E0E8921A9B94F00F8FBE2 /* GaussFilter */,
@@ -249,7 +254,6 @@
 				7B1E0E7921A9B94E00F8FBE2 /* images */,
 				7B1E0E8621A9B94E00F8FBE2 /* MosaicProcess */,
 				7B1E0E9121A9B94F00F8FBE2 /* RectDetection */,
-				7B1E0E8C21A9B94F00F8FBE2 /* Utils */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -298,17 +302,6 @@
 				7B1E0E8B21A9B94F00F8FBE2 /* GaussFilterTool.mm */,
 			);
 			path = GaussFilter;
-			sourceTree = "<group>";
-		};
-		7B1E0E8C21A9B94F00F8FBE2 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				7B1E0E8D21A9B94F00F8FBE2 /* FaceUtils.h */,
-				7B1E0E8E21A9B94F00F8FBE2 /* haarcascade_eye.xml */,
-				7B1E0E8F21A9B94F00F8FBE2 /* haarcascade_frontalface_alt.xml */,
-				7B1E0E9021A9B94F00F8FBE2 /* FaceUtils.mm */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		7B1E0E9121A9B94F00F8FBE2 /* RectDetection */ = {
@@ -373,6 +366,26 @@
 				8EA5530C21C744230075E951 /* WTRealTimeRectDetetionTool.mm */,
 			);
 			path = RealTimeRectDetection;
+			sourceTree = "<group>";
+		};
+		8EEAE89321D381870028FB6A /* FaceDistinguish */ = {
+			isa = PBXGroup;
+			children = (
+				8EEAE89C21D382090028FB6A /* FaceDistinguishTool.h */,
+				8EEAE89D21D382090028FB6A /* FaceDistinguishTool.mm */,
+			);
+			path = FaceDistinguish;
+			sourceTree = "<group>";
+		};
+		8EEAE89421D381DB0028FB6A /* FaceDetection */ = {
+			isa = PBXGroup;
+			children = (
+				8EEAE89521D381DB0028FB6A /* FaceUtils.h */,
+				8EEAE89621D381DB0028FB6A /* haarcascade_eye.xml */,
+				8EEAE89721D381DB0028FB6A /* haarcascade_frontalface_alt.xml */,
+				8EEAE89821D381DB0028FB6A /* FaceUtils.mm */,
+			);
+			path = FaceDetection;
 			sourceTree = "<group>";
 		};
 		90605456E0AF098154F97D01 /* Frameworks */ = {
@@ -455,12 +468,11 @@
 				7B1E0EAD21A9B94F00F8FBE2 /* lineimg.png in Resources */,
 				7B1E0EBE21A9B94F00F8FBE2 /* reset_icon.png in Resources */,
 				7B1E0ECA21A9B94F00F8FBE2 /* TJRectDectectPreviewController.xib in Resources */,
-				7B1E0EBB21A9B94F00F8FBE2 /* haarcascade_frontalface_alt.xml in Resources */,
-				7B1E0EBA21A9B94F00F8FBE2 /* haarcascade_eye.xml in Resources */,
 				7B1E0E5A21A9AFE400F8FBE2 /* main.plist in Resources */,
 				7B1E0E6D21A9B92C00F8FBE2 /* WTDrawRectController.xib in Resources */,
 				7B1E0EC821A9B94F00F8FBE2 /* TJRectDectectController.xib in Resources */,
 				7B1E0E4C21A9A7C400F8FBE2 /* Assets.xcassets in Resources */,
+				8EEAE89A21D381DC0028FB6A /* haarcascade_frontalface_alt.xml in Resources */,
 				7B1E0EBD21A9B94F00F8FBE2 /* bigger_rect.png in Resources */,
 				7B1E0E7221A9B92C00F8FBE2 /* WTHoughLinesVC.xib in Resources */,
 				7B1E0E7421A9B92C00F8FBE2 /* WTFaceRectDetectionVC.xib in Resources */,
@@ -472,6 +484,7 @@
 				7B1E0EC121A9B94F00F8FBE2 /* rotation_icon.png in Resources */,
 				7B1E0EBF21A9B94F00F8FBE2 /* rect1.png in Resources */,
 				7B1E0EB721A9B94F00F8FBE2 /* face3_me.png in Resources */,
+				8EEAE89921D381DC0028FB6A /* haarcascade_eye.xml in Resources */,
 				7B1E0EAC21A9B94F00F8FBE2 /* face4_me.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,7 +535,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B1E0EBC21A9B94F00F8FBE2 /* FaceUtils.mm in Sources */,
 				7B1E0EC721A9B94F00F8FBE2 /* TJRectModel.m in Sources */,
 				7B1E0E4721A9A7C400F8FBE2 /* ViewController.m in Sources */,
 				8EA5530D21C744230075E951 /* WTRealTimeRectDetetionTool.mm in Sources */,
@@ -531,9 +543,11 @@
 				7B1E0E6B21A9B92C00F8FBE2 /* WTGaussFilterVC.m in Sources */,
 				7B1E0E5221A9A7C400F8FBE2 /* main.m in Sources */,
 				7B1E0EB821A9B94F00F8FBE2 /* ImageProcessUtils.mm in Sources */,
+				8EEAE89E21D382090028FB6A /* FaceDistinguishTool.mm in Sources */,
 				7B1E0E6C21A9B92C00F8FBE2 /* WTHoughLinesVC.m in Sources */,
 				7B1E0EC321A9B94F00F8FBE2 /* TJRectDectectController.m in Sources */,
 				7B1E0ECB21A9B94F00F8FBE2 /* UIImage+fixOrientation.m in Sources */,
+				8EEAE89B21D381DC0028FB6A /* FaceUtils.mm in Sources */,
 				7B1E0E7121A9B92C00F8FBE2 /* WTDrawRectController.m in Sources */,
 				7B1E0EC421A9B94F00F8FBE2 /* TJRectDectectPreviewController.m in Sources */,
 				7B1E0EB921A9B94F00F8FBE2 /* GaussFilterTool.mm in Sources */,
