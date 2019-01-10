@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WTRealTimeRectDetetionTool : NSObject
 
++(instancetype)share;
+-(instancetype)processImage:(UIImage*)resImg completion:(void(^)(BOOL success))completion;
+-(NSArray*)getProcessedImages;
+
 +(UIImage*)drawRectInImage:(UIImage*)resImg;
 +(UIImage*)zhizhen_drawRectInImage:(UIImage*)resImg;
 

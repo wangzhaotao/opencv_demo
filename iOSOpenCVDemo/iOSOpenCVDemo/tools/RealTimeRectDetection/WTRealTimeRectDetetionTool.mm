@@ -24,9 +24,51 @@
 using namespace cv;
 using namespace std;
 
+static WTRealTimeRectDetetionTool *tool = nil;
+
+@interface WTRealTimeRectDetetionTool ()
+@property (nonatomic, strong) NSMutableArray *tmpArray;
+
+@end
+
 @implementation WTRealTimeRectDetetionTool
 
 #pragma mark public
++(instancetype)share {
+    
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        tool = [[WTRealTimeRectDetetionTool alloc]init];
+    });
+    return tool;
+}
+-(NSArray*)getProcessedImages {
+    return tool->_tmpArray;
+}
+-(instancetype)processImage:(UIImage*)resImg completion:(void(^)(BOOL success))completion {
+    
+    if (tool) {
+        //--------------------------------------
+        tool->_tmpArray = [NSMutableArray array];
+        [tool->_tmpArray addObject:@{@"原始图像":resImg}];
+        //--------------------------------------
+    }
+    
+    Mat res_mat, dst_mat;
+    UIImageToMat(resImg, res_mat);
+    
+    rectDetectWithCorners(res_mat);
+    
+    if (completion) {
+        completion(YES);
+    }
+    
+    
+    
+    
+    return tool;
+}
+
 +(UIImage*)bridge_getRectDetectImage:(UIImage*)resImg {
     
     Mat res_mat, dst_mat;
@@ -98,11 +140,19 @@ Mat rectDetectWithCorners(Mat &res_mat) {
     //提取图像
     cv::Mat transmtx = cv::getPerspectiveTransform(corners_tmp , quad_pts);
     cv::warpPerspective(res_mat, quad, transmtx, quad.size());
+    //--------------------------------------
+    UIImage *tmpImg = MatToUIImage(quad);
+    [tool->_tmpArray addObject:@{@"提取图像":tmpImg}];
+    //--------------------------------------
 
     //拉普拉斯算子增强对比度
     Mat imageMat;
     Mat kernel = (Mat_<float>(3,3) << 0, -1, 0,  -1, 5, -1, 0, -1, 0);
     filter2D(quad, imageMat, quad.depth(), kernel);
+    //--------------------------------------
+    tmpImg = MatToUIImage(imageMat);
+    [tool->_tmpArray addObject:@{@"拉普拉斯算子增强对比度":tmpImg}];
+    //--------------------------------------
     //Mat --> UIImage
     //UIImage *dstImage = MatToUIImage(imageMat);
     return imageMat;
@@ -115,8 +165,17 @@ vector<cv::Point> processImage(Mat &res_mat) //, vector<cv::Point> &cornors1
     
     //获取灰度图像
     cvtColor(res_mat, src_gray, COLOR_BGR2GRAY);
+    //--------------------------------------
+    UIImage *tmpImg = MatToUIImage(src_gray);
+    [tool->_tmpArray addObject:@{@"灰度图":tmpImg}];
+    //--------------------------------------
+    
     //线性滤波，模糊处理，消除某些背景干扰信息
     blur(src_gray, filtered, cv::Size(3, 3));
+    //--------------------------------------
+    tmpImg = MatToUIImage(filtered);
+    [tool->_tmpArray addObject:@{@"线性滤波":tmpImg}];
+    //--------------------------------------
     //高斯滤波
     //GaussianBlur(src_gray, filtered, cv::Size(3, 3), 0);
     //中值滤波
@@ -127,14 +186,28 @@ vector<cv::Point> processImage(Mat &res_mat) //, vector<cv::Point> &cornors1
     if (flag==0) {
         //腐蚀操作，消除某些背景干扰信息
         erode(filtered, filtered, Mat(),cv::Point(-1, -1), 3, 1, 1);
+        
+        //--------------------------------------
+        tmpImg = MatToUIImage(filtered);
+        [tool->_tmpArray addObject:@{@"腐蚀操作":tmpImg}];
+        //--------------------------------------
     }
     
     int thresh = 35;
     //边缘检测
     Canny(filtered, edges, thresh, thresh*3, 3);
+    //--------------------------------------
+    tmpImg = MatToUIImage(edges);
+    [tool->_tmpArray addObject:@{@"边缘检测":tmpImg}];
+    //--------------------------------------
     if (flag==0) {
         //膨胀操作，尽量使边缘闭合
         dilate(edges, dilated_edges, Mat(), cv::Point(-1, -1), 3, 1, 1);
+        
+        //--------------------------------------
+        tmpImg = MatToUIImage(dilated_edges);
+        [tool->_tmpArray addObject:@{@"膨胀操作":tmpImg}];
+        //--------------------------------------
     }else{
        edges.copyTo(dilated_edges);
     }
@@ -214,6 +287,10 @@ vector<cv::Point> processImage(Mat &res_mat) //, vector<cv::Point> &cornors1
     {
         line(res_mat, cornors1[i], cornors1[(i+1)%cornors1.size()], CV_RGB(255, 0, 0), 15, CV_AA); //Scalar(0,0,255)
     }
+    //--------------------------------------
+    tmpImg = MatToUIImage(res_mat);
+    [tool->_tmpArray addObject:@{@"绘制出四条边":tmpImg}];
+    //--------------------------------------
     return cornors1;
 }
 
@@ -385,6 +462,8 @@ void copyLineRecTImage(Mat &res_mat) {
         line(res_mat, corners[i], corners[(i+1)%corners.size()], Scalar(0,0,255), 5);
     }
 }
+
+
 
 
 @end
