@@ -56,6 +56,9 @@
 		7B1E0ECB21A9B94F00F8FBE2 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E0EAA21A9B94F00F8FBE2 /* UIImage+fixOrientation.m */; };
 		8E324B0A21AD7814009B7C9E /* RectCorrectionTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8E324B0921AD7814009B7C9E /* RectCorrectionTool.mm */; };
 		8E52D08321DF389000E8BD9C /* wTShowBigImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E52D08121DF389000E8BD9C /* wTShowBigImageVC.m */; };
+		8E52D2E921E7557200129804 /* WTBoundaryDetectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E52D2E721E7557200129804 /* WTBoundaryDetectionVC.m */; };
+		8E52D2EA21E7557200129804 /* WTBoundaryDetectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E52D2E821E7557200129804 /* WTBoundaryDetectionVC.xib */; };
+		8E52D2EE21E755D700129804 /* WTBoundaryDetectionTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8E52D2ED21E755D700129804 /* WTBoundaryDetectionTool.mm */; };
 		8E794D9021DDFBA1008272EC /* WTRectDetectionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E794D8E21DDFBA1008272EC /* WTRectDetectionDetailVC.m */; };
 		8E794D9121DDFBA1008272EC /* WTRectDetectionDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E794D8F21DDFBA1008272EC /* WTRectDetectionDetailVC.xib */; };
 		8E794D9621DE00D3008272EC /* WTRectDetectionDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E794D9421DE00D3008272EC /* WTRectDetectionDetailCell.m */; };
@@ -143,6 +146,11 @@
 		8E324B0921AD7814009B7C9E /* RectCorrectionTool.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RectCorrectionTool.mm; sourceTree = "<group>"; };
 		8E52D08021DF389000E8BD9C /* wTShowBigImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wTShowBigImageVC.h; sourceTree = "<group>"; };
 		8E52D08121DF389000E8BD9C /* wTShowBigImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wTShowBigImageVC.m; sourceTree = "<group>"; };
+		8E52D2E621E7557200129804 /* WTBoundaryDetectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTBoundaryDetectionVC.h; sourceTree = "<group>"; };
+		8E52D2E721E7557200129804 /* WTBoundaryDetectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTBoundaryDetectionVC.m; sourceTree = "<group>"; };
+		8E52D2E821E7557200129804 /* WTBoundaryDetectionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WTBoundaryDetectionVC.xib; sourceTree = "<group>"; };
+		8E52D2EC21E755D700129804 /* WTBoundaryDetectionTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTBoundaryDetectionTool.h; sourceTree = "<group>"; };
+		8E52D2ED21E755D700129804 /* WTBoundaryDetectionTool.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WTBoundaryDetectionTool.mm; sourceTree = "<group>"; };
 		8E794D8D21DDFBA1008272EC /* WTRectDetectionDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTRectDetectionDetailVC.h; sourceTree = "<group>"; };
 		8E794D8E21DDFBA1008272EC /* WTRectDetectionDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTRectDetectionDetailVC.m; sourceTree = "<group>"; };
 		8E794D8F21DDFBA1008272EC /* WTRectDetectionDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WTRectDetectionDetailVC.xib; sourceTree = "<group>"; };
@@ -255,6 +263,9 @@
 				8E794D8D21DDFBA1008272EC /* WTRectDetectionDetailVC.h */,
 				8E794D8E21DDFBA1008272EC /* WTRectDetectionDetailVC.m */,
 				8E794D8F21DDFBA1008272EC /* WTRectDetectionDetailVC.xib */,
+				8E52D2E621E7557200129804 /* WTBoundaryDetectionVC.h */,
+				8E52D2E721E7557200129804 /* WTBoundaryDetectionVC.m */,
+				8E52D2E821E7557200129804 /* WTBoundaryDetectionVC.xib */,
 				8E794D9221DE00AE008272EC /* View */,
 			);
 			path = controllers;
@@ -263,6 +274,7 @@
 		7B1E0E7521A9B94400F8FBE2 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				8E52D2EB21E7559500129804 /* BoundaryDetection */,
 				8EEAE89421D381DB0028FB6A /* FaceDetection */,
 				8EEAE89321D381870028FB6A /* FaceDistinguish */,
 				8EA5530A21C743F50075E951 /* RealTimeRectDetection */,
@@ -386,6 +398,15 @@
 			path = BigImageShow;
 			sourceTree = "<group>";
 		};
+		8E52D2EB21E7559500129804 /* BoundaryDetection */ = {
+			isa = PBXGroup;
+			children = (
+				8E52D2EC21E755D700129804 /* WTBoundaryDetectionTool.h */,
+				8E52D2ED21E755D700129804 /* WTBoundaryDetectionTool.mm */,
+			);
+			path = BoundaryDetection;
+			sourceTree = "<group>";
+		};
 		8E794D9221DE00AE008272EC /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +482,7 @@
 		7B1E0E3721A9A7C400F8FBE2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WT;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = wztMac;
 				TargetAttributes = {
@@ -521,6 +543,7 @@
 				7B1E0EB021A9B94F00F8FBE2 /* face1.png in Resources */,
 				7B1E0EC021A9B94F00F8FBE2 /* right_icon.png in Resources */,
 				7B1E0EC121A9B94F00F8FBE2 /* rotation_icon.png in Resources */,
+				8E52D2EA21E7557200129804 /* WTBoundaryDetectionVC.xib in Resources */,
 				7B1E0EBF21A9B94F00F8FBE2 /* rect1.png in Resources */,
 				7B1E0EB721A9B94F00F8FBE2 /* face3_me.png in Resources */,
 				8EEAE89921D381DC0028FB6A /* haarcascade_eye.xml in Resources */,
@@ -594,7 +617,9 @@
 				7B1E0EC421A9B94F00F8FBE2 /* TJRectDectectPreviewController.m in Sources */,
 				7B1E0EB921A9B94F00F8FBE2 /* GaussFilterTool.mm in Sources */,
 				7B1E0E6E21A9B92C00F8FBE2 /* WTFaceRectDetectionVC.m in Sources */,
+				8E52D2EE21E755D700129804 /* WTBoundaryDetectionTool.mm in Sources */,
 				7B1E0E4421A9A7C400F8FBE2 /* AppDelegate.m in Sources */,
+				8E52D2E921E7557200129804 /* WTBoundaryDetectionVC.m in Sources */,
 				7B1E0EC221A9B94F00F8FBE2 /* TJPointCircleView+Extension.m in Sources */,
 				7B1E0E7321A9B92C00F8FBE2 /* WTMosaicImageVC.m in Sources */,
 				7B1E0EAB21A9B94F00F8FBE2 /* HoughLinesTool.mm in Sources */,
@@ -746,6 +771,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RNS9QEVKGH;
 				INFOPLIST_FILE = iOSOpenCVDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -764,6 +790,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RNS9QEVKGH;
 				INFOPLIST_FILE = iOSOpenCVDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

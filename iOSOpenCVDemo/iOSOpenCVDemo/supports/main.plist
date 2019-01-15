@@ -60,6 +60,14 @@
 			<key>vc</key>
 			<string>WTRectDetectionDetailVC</string>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>双边滤波</string>
+			<key>method</key>
+			<string>clickCellAction:</string>
+			<key>vc</key>
+			<string>WTBoundaryDetectionVC</string>
+		</dict>
 	</array>
 </dict>
 </plist>
